@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dteebmpt2ifhw"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_15dj2"]
+[ext_resource type="Texture2D" uid="uid://jqy46j76tjf1" path="res://NinjaAdventure/Actor/Characters/BlackSorcerer/SpriteSheet.png" id="2_kwxcs"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sgnjw"]
+radius = 9.0
+height = 18.0
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_15dj2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kwxcs")
+hframes = 4
+vframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_sgnjw")
